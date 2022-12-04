@@ -1,0 +1,146 @@
+/* This css file is used by all the pages */
+
+/* Import Open Sans and Dancing Script fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* Remove default body margin, set default font on the site to Open Sans. */
+html, body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Always show the vertical scroll bar to prevent the navbar from shifting position when navigating to a page with less content than the screen height */
+body {
+    overflow-y: scroll;
+}
+
+/*  
+    The main container for each page.
+    Flex column let's us organize our pages well by stacking a header, body and footer over each other.
+    Minimum height is set to the full height of the screen so that the footer will always be at the bottom (The body uses flex grow to expand in unused space)
+*/
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page header, flexbox to display our logo and navbar side by side */
+header {
+    background: #101010;
+    color: #fff;
+    display: flex;
+    padding: 5px 250px;
+}
+
+/* Removes flexbox of the header when screen width is less than 1300px to make the logo and navbar stack on top of eachother rather than side by side on smaller screens
+   Also makes the logo and nav text align to the left side and changes the padding to look better on mobile */
+@media (max-width: 1300px) {
+    header {
+        display: block;
+        text-align: left;
+        padding: 5px 35px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Logo styling, using the Dancing Script font */
+.logo {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+}
+
+/* Our logo is clickable with an <a> tag so this is to prevent <a> tags default styling */
+.logo > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Our navbar is set to expand to the remaining space in the header container.
+   Flexbox to display individual nav elements side by side and placed at the end (right) with justify-content.
+   flex-wrap makes the elements display on new lines if there isn't enough space to display them side by side */
+nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+/* Remove flexbox from logo and nav so that they display on top of each other rather than side by side on smaller screens */
+@media (max-width: 1300px) {
+    .logo {
+        display: block;
+        margin: 20px 15px;
+    }
+
+    nav {
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+/* Adds a margin to each nav element */
+nav > div {
+    margin: 15px;
+}
+
+/* Nav element styling */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #eee;
+}
+
+/* Adds a white border underneath the page we are currently on */
+nav .active {
+    border-bottom: 1px solid #fff;
+}
+
+/* The main part/container of each page. Set to grow to the remaining space of the parent flex container */
+main {
+    flex: 1;
+    background: #ccc;
+}
+
+/* Footer styling, also a flexbox to display the three columns of information next to each other */
+footer {
+    background: #101010;
+    display: flex;
+    justify-content: center;
+    padding: 0 200px;
+    font-size: 14px;
+}
+
+/* Expand each child of footer to expand as much as possible, add spacing in between each column */
+footer > div {
+    color: rgb(187, 186, 186);
+    margin: 40px 50px;
+    flex: 1;
+}
+
+/* Display each column underneath each other rather than side by side on smaller screens. Update margin and padding to look better on mobile */
+@media (max-width: 1300px) {
+    footer {
+        display: block;
+        padding: 25px;
+    }
+
+    footer > div {
+        margin: 75px 50px;
+    }
+}
+
+/* Removed default style of <a> tag */
+footer a {
+    color: rgb(187, 186, 186);
+    text-decoration: none;
+}

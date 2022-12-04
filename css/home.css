@@ -1,0 +1,58 @@
+/* The backdrop for our welcome page. The background image should fill a big space of the screen, cover the full width and height and not repeat */
+.background {
+    /* https://www.pexels.com/nb-no/bilde/hus-innsjo-kveld-falle-1612351/ */
+    /* Image taken byeberhard grossgasteiger, Pexels.com */
+    background: url("../images/welcomebackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 900px;
+}
+
+/* Styling for the call to action part of the welcome page. Overflow hidden prevents the padding from shifting the position of the parent container */
+.hero {
+    overflow: hidden;
+    padding: 250px 250px;
+    max-width: 600px;
+    color: #fff;
+}
+
+/* Large font size and Dancing Script font for the "welcome to.." text */
+.hero > h1 {
+    font-size: 68px;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Update the styling on smaller screens to look good */
+@media (max-width: 1300px) {
+    .hero {
+        padding: 250px 25px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero > h1 {
+        font-size: 52px;
+    }
+}
+
+/* Removes default <a> styling */
+.hero > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styling for the two buttons on the welcome page. Transition makes the on hover color transition between the two colors over a span of 200ms */
+.hero-btn {
+    font-size: 21px;
+    padding: 8px 15px;
+    border: 1px solid #fff;
+    display: inline-block;
+    transition: 0.2s;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.hero-btn:hover {
+    cursor: pointer;
+    border: 1px solid #6E492C;
+}

@@ -1,0 +1,102 @@
+/* The main container for our menu related content. */
+.menu {
+    padding: 0 250px;
+    margin: 50px auto;
+}
+
+/* Remove most of the horizontal padding on smaller screens */
+@media (max-width: 1300px) {
+    .menu {
+        padding: 0 25px;
+    }
+}
+
+/* Styling for the page headline/title */
+.menu-header {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Display flex to display the different categories side by side as columns */
+.categories {
+    display: flex;
+}
+
+/* Each section/category fills the available space */
+.categories > section {
+    margin: 25px;
+    flex: 1;
+}
+
+/* Remove left margin of the first category */
+.categories > section:first-of-type {
+    margin-left: 0;
+}
+
+/* Removes right margin of the last category */
+.categories > section:last-of-type {
+    margin-right: 0;
+}
+
+/* Removes flexbox on smaller screens to stack the categories on top of eachother rather than side by side */
+@media (max-width: 1300px) {
+    .categories {
+        display: block;
+    }
+
+    .categories > section {
+        margin: 25px 0;
+    }
+
+    .menu-header {
+        text-align: left;
+    }
+}
+
+/* Styling for the text/name of each category */
+.categories > section > h1 {
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-bottom: 1px solid #9f9f9f;
+}
+
+/* Container for menu items. Display flex as we want the menu item image and text to display side by side */
+.menu-item {
+    display: flex;
+    margin-bottom: 75px;
+}
+
+/* The menu item image. Border radius to make it display as a circle even if the original image is squared.
+   Vertically aligns self to the center of the parent so that it is centered regardless of how much text is added in the flexbox next to it */
+.menu-item > img {
+    width: 150px;
+    height:  150px;
+    border-radius: 50%;
+    margin-right: 25px;
+    align-self: center;
+}
+
+.menu-item-name {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+.menu-item-desc {
+    margin-bottom: 15px;
+}
+
+/* Container for allergies or other menu item hints, flexbox to display them next to eachother */
+.menu-item-hints {
+    display: flex;
+}
+
+.menu-item-hints > img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}

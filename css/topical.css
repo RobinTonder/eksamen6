@@ -1,0 +1,43 @@
+/* Container for the page content */
+.topical {
+    padding: 0 225px;
+    margin: 50px auto;
+    display: flex;
+}
+
+/* For the top most container we want the content to be horizontally centered */
+.top {
+    justify-content: center;
+}
+
+.topical > p {
+    margin: 0 25px;
+}
+
+/* Each section should expand in the available space. Width:0 makes the flexboxes same size */
+.topical > section {
+    flex: 1;
+    width: 0;
+    margin: 0 25px;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+}
+
+/* Remove flexbox on smaller screens to stack children underneath eachother rather than side by side */
+@media (max-width: 1300px) {
+    .topical {
+        display: block;
+        padding: 0 25px;
+    }
+
+    .topical > section {
+        margin-bottom: 50px;
+        width: 90%;
+    }
+}
+
+/* Change default <a> color */
+.link {
+    color: #4B0B0B;
+    font-weight: bold;
+}

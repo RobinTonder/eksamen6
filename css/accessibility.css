@@ -1,0 +1,37 @@
+/* Container for the page content */
+.accessibility {
+    padding: 0 225px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.accessibility > p {
+    margin: 0 25px;
+}
+
+/* Each section should expand in the available space. Width:0 makes the flexboxes same size*/
+.accessibility > section {
+    flex: 1;
+    width: 0;
+    margin: 0 25px;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+}
+
+/* Remove flexbox on smaller screens to stack children underneath eachother rather than side by side */
+@media (max-width: 1300px) {
+    .accessibility {
+        display: block;
+        padding: 0 25px;
+    }
+
+    .accessibility > section {
+        margin-bottom: 50px;
+        width: 90%;
+    }
+}
+
+/* Change default <a> color */
+.link {
+    color: rgb(192, 26, 26);
+}
