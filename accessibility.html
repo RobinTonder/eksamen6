@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/accessibility.css" />
+    <title>Pilestredet Hall</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header>
+        <div class="logo">
+          <a href="./index.html"><div>Pilestredet Hall</div></a>
+        </div>
+        <nav>
+          <div><a href="./index.html">Welcome</a></div>
+          <div><a href="./booking.html">Booking</a></div>
+          <div><a href="./menu.html">Café / Menu</a></div>
+          <div>
+            <a class="active" href="./accessibility.html">Accessibility</a>
+          </div>
+          <div><a href="./topical.html">Topical</a></div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="accessibility">
+          <section>
+            <h1>Welcome page</h1>
+            <p>
+              The report shows that we got 0 errors on the homepage. However, we
+              can see 3 contrast errors. These say that we have very low
+              contrast between "Welcome to Pilestredet Hall", "Book Table" ,
+              "See the menu" and the background color. We don't actually see the
+              background color, because we are using a background image, so we
+              have decided to ignore these errors since the contrast looks good
+              and the texts are easily readable. We tried the suggested color
+              from the report, but the text blends too much into the background
+              image. The alert symbol is just telling us that the "Welcome"
+              button is redirecting to the homepage.
+            </p>
+          </section>
+          <section>
+            <!-- https://wave.webaim.org/report#/https://robintonder.github.io/eksamen/index.html link to our initial report! -->
+            <!-- https://wave.webaim.org/report#/https://robintonder.github.io/eksamen4/index.html  THIS IS THE SECOND REPORT WITH CORRECTED ERRORS! -->
+            <!-- Screenshot of report from wave.webaim.org -->
+            <img
+              src="./images/access1.jpg"
+              width="100%"
+              alt="Welcome report"
+              title="Welcome report from wave.webaim.org"
+            />
+          </section>
+        </div>
+
+        <div class="accessibility">
+          <section>
+            <h1>Booking page</h1>
+            <p>
+              The report regarding our "Booking" page flagged 12 errors. All of
+              them were for missing label for the form. Labels have been added
+              and should fix the accessibility and make it more readable and
+              eyecatching. 2 Alerts; one is missing heading and we have added
+              that; "Information" on top of the page. Second alert is "Booking"
+              buttons is redirecting to the same page
+            </p>
+          </section>
+          <section>
+            <!-- Screenshot of report from wave.webaim.org -->
+            <img
+              src="./images/access2.png"
+              width="100%"
+              alt="Booking report"
+              title="Booking report from wave.webaim.org"
+            />
+          </section>
+        </div>
+
+        <div class="accessibility">
+          <section>
+            <h1>Menu/Cafe page</h1>
+            <p>
+              No errors on the menu/cafe page. We remembered to put "alt" text
+              to every image since this was one of the comments we got during
+              our past assignments. We also put in "title" text to every image
+              to make it even more readable. Alert: "Cafe/Menu" button is
+              redirecting to same page
+            </p>
+          </section>
+          <section>
+            <!-- Screenshot of report from wave.webaim.org -->
+            <img
+              src="./images/access3.png"
+              width="100%"
+              alt="Menu report"
+              title="Menu report from wave.webaim.org"
+            />
+          </section>
+        </div>
+
+        <div class="accessibility">
+          <section>
+            <h1>Topical page</h1>
+            <p>
+              No errors on the topical page. The reports shows that we have
+              three contrast errors. All of them are regarding links to external
+              sites or PDF. A solution to making the constrast better was to
+              make the link-text bold. After doing this, the links much more
+              visible and more readable which increases the accessibility. The
+              color of the links were brighter and looked more visible, but we
+              changed it to a darker color to remove the contrast error alert.
+              Alerts: 1. is redirecting to same page. 2. PDF link.
+
+              <br />
+              <br />
+              <strong>Group thoughts:</strong> From the very beginning, we had
+              in mind that the website should be easily readable by everyone.
+              Some actions we took was to make sure that background image in the
+              "Welcome" page was dark enough for the "Welcome to..." text to be
+              easily readable in a bright front. This makes it harder for the
+              text to blend into the background image. By doing this; we
+              achieved a very readably welcome text. Another idea we had was to
+              make less important text more aesthetic. This is why the
+              "Pilestredet Hall" from the banner and "Welcome text" uses
+              different font to make it more appealing. The rest of the website
+              uses regular font since that info is more important to read and
+              understand. Someplaces uses also bold font to make it even more
+              readable.
+            </p>
+          </section>
+          <section>
+            <!-- Screenshot of report from wave.webaim.org -->
+            <img
+              src="./images/access4.png"
+              width="100%"
+              alt="Topical report"
+              title="Topical report from wave.webaim.org"
+            />
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div>
+          <strong>Owner: </strong> Ola Nordmann <br /><br />
+          <!-- Clickable Email button -->
+          <strong>Email: </strong>
+          <a href="mailto: Hyttehallreservasjon@gmail.com"
+            >Hyttehallreservasjon@gmail.com</a
+          >
+          <br /><br />
+          <!-- Clickable Phone button -->
+          <strong> Phone: </strong> <a href="tel:+47 12345678">+47 12345678</a>
+        </div>
+
+        <div>
+          <strong> Venue name: </strong> Pilestredet Hall <br /><br />
+          <strong>Address: </strong> Hytteveien 34C <br /><br />
+          <strong> Postal code: </strong> 4304 Oslo, Norge
+        </div>
+
+        <div>
+          <strong>Opening hours Cafe:</strong>
+          <br /><br />
+          <strong> Monday - Friday: </strong> 10:00-20:00 <br /><br />
+          <strong> Saturday - Sunday: </strong> 12:00-18:00
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
